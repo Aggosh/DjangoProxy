@@ -5,7 +5,7 @@ celerybeat.pid
 celerybeat-schedule.*
 ngrok.exe
 
-setting.py
+settings.py
 
 .vscode
 
