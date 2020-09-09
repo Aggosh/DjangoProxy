@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d1844b8-d40c-4c40-9451-b2fd17ab1451" name="Default Changelist" comment="" />
+    <list default="true" id="9d1844b8-d40c-4c40-9451-b2fd17ab1451" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/thumbnailer/proxy_parsers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/celerybeat-schedule.bak" beforeDir="false" afterPath="$PROJECT_DIR$/celerybeat-schedule.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/celerybeat-schedule.dat" beforeDir="false" afterPath="$PROJECT_DIR$/celerybeat-schedule.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/celerybeat-schedule.dir" beforeDir="false" afterPath="$PROJECT_DIR$/celerybeat-schedule.dir" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoproxy/celery.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoproxy/celery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoproxy/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoproxy/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thumbnailer/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/thumbnailer/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thumbnailer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/thumbnailer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thumbnailer/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/thumbnailer/tasks.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +29,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1gJfcSgGZ4dQ1IVwh7e8COgFQes" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -73,10 +89,28 @@
       <updated>1597837694376</updated>
       <workItem from="1597837695536" duration="3253000" />
       <workItem from="1597912078169" duration="5179000" />
+      <workItem from="1597923030954" duration="11866000" />
+      <workItem from="1597999167789" duration="1528000" />
+      <workItem from="1598004240253" duration="1601000" />
+      <workItem from="1598031465225" duration="60000" />
+      <workItem from="1598031594910" duration="49000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
