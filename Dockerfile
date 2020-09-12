@@ -10,4 +10,4 @@ RUN pip3 install -r /code/requirements.txt
 COPY ./djangoproxy /code/
 WORKDIR /code/
 
-EXPOSE 8000
+CMD gunicorn djangoproxy.wsgi:application --bind 0.0.0.0:$PORT
