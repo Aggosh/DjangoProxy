@@ -8,15 +8,26 @@ from rest_framework import viewsets
 
 def get_proxy(request):
     key = request.GET.get('key')
-    p_type = 1 if request.GET.get('type') is None else request.GET.get('type')
-    status = 2 if request.GET.get('status') is None else request.GET.get('status')
-    print(key)
-    print(p_type)
-    print(status)
+
     try:
         ApiKey.objects.get(key=key, end_date__gte=datetime.datetime.now().date())
-        proxy = Proxy.objects.filter(type=p_type, status=status)
-        return HttpResponse('\n'.join([p.proxy for p in proxy]))
+
+        res = ''
+
+        if request.GET.get('http') == 'on':
+            http = Proxy.objects.filter(type=0, status=2)
+            res = res + '\n'.join([p.proxy for p in http])
+        if request.GET.get('https') == 'on':
+            https = Proxy.objects.filter(type=1, status=2)
+            res = res + '\n'.join([p.proxy for p in https])
+        if request.GET.get('socks') == 'on':
+            socks = Proxy.objects.filter(type=2, status=2)
+            res = res + '\n'.join([p.proxy for p in socks])
+        if request.GET.get('socks5') == 'on':
+            socks5 = Proxy.objects.filter(type=3, status=2)
+            res = res + '\n'.join([p.proxy for p in socks5])
+
+        return HttpResponse(res)
     except ApiKey.DoesNotExist:
         return HttpResponse('API key not exist')
 

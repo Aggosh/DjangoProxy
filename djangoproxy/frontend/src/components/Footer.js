@@ -8,7 +8,7 @@ export default class Footer extends Component {
                 {`
                     footer {
                         background-color: #1F1C1C;
-                        height: 70px;
+                        height: 90px;
                     }
 
                     footer p{
@@ -22,7 +22,10 @@ export default class Footer extends Component {
                 }
             </style>
             <footer className="mt-auto w-100">
-                <p>Copyright © 2020 - WhiteHats</p>
+                <div className="row mx-0">
+                    <p className="my-3 col-9">Copyright © 2020 - WhiteHats</p>
+                    <a className="my-3 col" href="//freekassa.ru/"><img src="//www.free-kassa.ru/img/fk_btn/31.png" title="Приём оплаты на сайте картами" /></a>
+                </div>
             </footer>
             </>
         )

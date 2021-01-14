@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import EnterKeyModal from './EnterKeyModal';
 
 export default class NaviBar extends Component {
@@ -45,8 +45,6 @@ export default class NaviBar extends Component {
                     <Nav className="w-100 text-center">
                         <Nav.Item className="col ip"><p>your IP: 127.0.0.1</p></Nav.Item>
                         <Nav.Link className="col">Free</Nav.Link>
-                        <Nav.Link className="col">Premium</Nav.Link>
-                        <Nav.Link className="col">About Us</Nav.Link>
                         <EnterKeyModal />
                     </Nav>
                 </Navbar.Collapse>

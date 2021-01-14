@@ -3,8 +3,8 @@ import {render} from 'react-dom';
 
 import NaviBar from './NaviBar';
 import ProxyOnline from './ProxyOnline';
-import Add from './Add';
-import Cards from './Cards';
+import ProxyFilter from './ProxyFilter';
+import Card from './Card';
 import About from './About';
 import Footer from './Footer';
 
@@ -24,9 +24,8 @@ class App extends Component {
             <NaviBar />
             <main className="container">
               <ProxyOnline />
-              <Add />
-              <Cards />
-              <Add />
+              <Card />
+              <ProxyFilter />
               <About />
             </main>
             <Footer />

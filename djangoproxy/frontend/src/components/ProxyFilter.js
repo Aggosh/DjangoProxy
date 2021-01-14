@@ -28,6 +28,7 @@ export default class ProxyFilter extends Component {
                     <input type="checkbox" name="https"/> HTTPS<br />
                     <input type="checkbox" name="http"/> HTTP<br />
                     <input type="checkbox" name="socks"/> SOCKS<br />
+                    <input type="checkbox" name="socks5"/> SOCKS5<br />
                 </div>
 
                 <div className="col-lg-3  mt-4">

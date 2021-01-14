@@ -13,10 +13,10 @@ celery_app.autodiscover_tasks(settings.INSTALLED_APPS)
 celery_app.conf.beat_schedule = {
     "collect-proxy-every-hour": {
         "task": "proxy.tasks.find_proxy",
-        "schedule": crontab(hour="*", minute=47),
+        "schedule": crontab(hour="*", minute=35),
     },
     "check-proxy-every-hour": {
         "task": "proxy.tasks.check_proxy",
-        "schedule": crontab(hour="*", minute=48),
+        "schedule": crontab(hour="*", minute=30),
     },
 }

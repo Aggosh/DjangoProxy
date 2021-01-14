@@ -127,6 +127,10 @@ class Example extends React.Component {
                         text-align:center;
                     }
 
+                    .hidden-checkbox{
+                        visibility: hidden;
+                    }
+
                     `}
                 </style>
 				<Button className="col-auto align-self-center" variant="gold" onClick={this.handleShow}>Login</Button>
@@ -145,10 +149,14 @@ class Example extends React.Component {
                             <input className="modal-key-input" name="key"/>
                             <p className="modal-body-text-second" align="center">Write or paste your Premium Key from the clipboard<br />
                             and press the "Login" (or Enter) button to log in</p>
+                            <input className="hidden-checkbox" type="checkbox" name="https" defaultChecked />
+                            <input className="hidden-checkbox" type="checkbox" name="http" defaultChecked />
+                            <input className="hidden-checkbox" type="checkbox" name="socks" defaultChecked />
+                            <input className="hidden-checkbox" type="checkbox" name="socks5" defaultChecked />
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="cancel" onClick={this.handleClose}>Cancel</Button>
-                            <Button variant="gold" type="submit">login</Button>
+                            <Button variant="gold" type="submit">login</Button> 
 					    </Modal.Footer>
                     </form>
 				</Modal>

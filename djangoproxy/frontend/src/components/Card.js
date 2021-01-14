@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import PayForm from './PayForm';
+import BuyModal from './BuyModal';
 
 export default class Card extends Component {
     render() {
@@ -90,8 +90,7 @@ export default class Card extends Component {
                             <p className="card-text">3$</p>
                         </div>
                         <div className="my-btn">
-                            <p>BUY</p>
-                            <PayForm />
+                            <BuyModal />
                         </div>
                     </div>
                 </div>
@@ -103,7 +102,7 @@ export default class Card extends Component {
                             <p className="card-text">5$</p>
                         </div>
                         <div className="my-btn">
-                            <p>BUY</p>
+                            <BuyModal />
                         </div>
                     </div>
                 </div>
@@ -115,7 +114,7 @@ export default class Card extends Component {
                             <p className="card-text">12$</p>
                         </div>
                         <div className="my-btn">
-                            <p>BUY</p>
+                          <BuyModal />
                         </div>
                     </div>
                 </div>
