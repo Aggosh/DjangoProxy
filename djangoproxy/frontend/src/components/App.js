@@ -11,8 +11,20 @@ import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      data: 'Loading'
+    }
+
+}
+
+  handleCallback = (proxyData) =>{
+    this.setState({data: proxyData})
+}
 
   render() {
+    const {data} = this.state;
         return(
           <>
           <style type="text/css">
@@ -23,9 +35,9 @@ class App extends Component {
           </style>
             <NaviBar />
             <main className="container">
-              <ProxyOnline />
+              <ProxyOnline parentCallback = {this.handleCallback} />
               <Card />
-              <ProxyFilter />
+              <ProxyFilter proxyData={data} />
               <About />
             </main>
             <Footer />

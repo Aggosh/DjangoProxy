@@ -3,7 +3,33 @@ import { Navbar, Nav } from 'react-bootstrap';
 import EnterKeyModal from './EnterKeyModal';
 
 export default class NaviBar extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state ={
+            user_id: "Loading",
+            user_flag: " "
+        };
+      }
+
+    componentDidMount() {
+        fetch("https://api.ipdata.co/?api-key=5e9d8bb1d3f2b9314eeb8686fe75a6d33c0b80c1d561c5027b51fe41")
+        .then(response => {
+            return response.json();
+        }, "jsonp")
+        .then(res => {
+            this.setState({
+                user_id: res.ip,
+                user_flag: res.flag
+            })
+        })
+        .catch(err => this.setState({
+            user_id: err
+        }))
+      };
+      
     render() {
+        const{user_id, user_flag} = this.state;
         return (
             <>
             <style type="text/css">
@@ -34,6 +60,10 @@ export default class NaviBar extends Component {
                     margin-right: -50%;
                     transform: translate(-50%, -50%);
                 }
+                .flag{
+                    margin-top: 5px;
+                    margin-left: 5px;
+                }
 
                 `}
             </style>
@@ -43,7 +73,8 @@ export default class NaviBar extends Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="w-100 text-center">
-                        <Nav.Item className="col ip"><p>your IP: 127.0.0.1</p></Nav.Item>
+                        <Nav.Item className="col ip"><p>your IP: {user_id}</p> </Nav.Item>
+                        <Nav.Item className="flag"> <img src={user_flag} /> </Nav.Item>
                         <Nav.Link className="col">Free</Nav.Link>
                         <EnterKeyModal />
                     </Nav>

@@ -5,9 +5,12 @@ celerybeat.pid
 celerybeat-schedule.*
 ngrok.exe
 
-settings.py
-
 .vscode
+
+docker-compose.yml
+Dockerfile
+
+__pycache__
 
 # Logs
 logs

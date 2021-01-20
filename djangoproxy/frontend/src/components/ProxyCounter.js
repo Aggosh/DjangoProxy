@@ -8,8 +8,9 @@ export default class ProxyCounter extends Component {
     this.state ={
         error: false,
         isLoaded: false,
-        items: []
-    };
+        items: [],
+        isLoaded: true,
+        };
   }
 
   componentDidMount() {
@@ -18,13 +19,18 @@ export default class ProxyCounter extends Component {
   };
 
   getData = () => {
-    fetch("api/proxy/?format=json")
+    fetch("/api/proxy/count/")
     .then(res => res.json())
     .then(
         (result) => {
             this.setState({
                 isLoaded: true,
-                count: result.count,
+                count: result.proxy_count,
+                count_http: result.proxy_http,
+                count_https: result.proxy_https,
+                count_socks: result.proxy_socks,
+                count_socks5: result.proxy_socks5,
+
             });
         },
         (error) => {
@@ -34,6 +40,7 @@ export default class ProxyCounter extends Component {
             })
         }
     )
+    this.props.parentCallback(this.state);
   }
 
   render() {
